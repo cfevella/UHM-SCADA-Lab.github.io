@@ -11,13 +11,13 @@ const SFlowSDN = () => (
     <h4>Notes</h4>
     <ul>
       <li>sFlow is a technology that monitors traffic via sampled packets of data.</li>
-      <li>The goal is to configure the network switches and Raspberry Pis to use sFlow to create a database of monitored traffic that can be fed into a machine learning (ML) algorithm. That data will be fed into the ML algorithm so it can learn to tell
-        the difference between normal and abnormal traffic.
-      </li>
+      <li>The goal is to configure the network switches and Raspberry Pis to use sFlow to create a database of monitored traffic that can be fed into a machine learning (ML) algorithm that can use it to learn to tell the difference between normal and abnormal network traffic.</li>
       <li>Use Netcat on Raspberry Pis to monitor the sFlow traffic (we do not need any sFlow software on Pi).</li>
       <li>XDR files are packs of sFlow data.</li>
       <li>The sFlow parser is coded with Python.</li>
       <li>sFlow parsing needs an exporter, collector, and analyzer. (refer to &quot;sFlow Structure&quot; in &quot;Helpful Links&quot; table below.)</li>
+      <li>All of the code for the parser is on the Raspberry Pi labeled &quot;sFlow&quot;. The System Administration team for the lab knows the username and password for the Pi.</li>
+      <li>The files for the code are located in &quot;-&quot;</li>
     </ul>
     <h4 className="pt-4">Helpful Links</h4>
     <Row>
@@ -84,6 +84,11 @@ const SFlowSDN = () => (
         <tr>
           <td>Create an sFlow packet parser using Python</td>
           <td>Chase and Andee</td>
+          <td>5/11/23</td>
+        </tr>
+        <tr>
+          <td>Code the sFlow parser to send parsed data to Logstash/Elasticsearch (Database).</td>
+          <td>-</td>
           <td>-</td>
         </tr>
       </tbody>
@@ -105,7 +110,7 @@ const SFlowSDN = () => (
         </tr>
         <tr>
           <td>I forget what the code is. I have to ask Mark.</td>
-          <td>pushes code file to github</td>
+          <td>pushes a file to github</td>
         </tr>
       </tbody>
     </Table>
@@ -199,8 +204,13 @@ const SFlowSDN = () => (
         </tr>
         <tr>
           <td>Chase</td>
-          <td>Andy and I are trying to test everything by taking parsed files from wireshark and putting it into a text file. We do that by copying the entire sFlow packet into a Hex Stream. Then we use the &quot;bytes.fromhex&apos;&apos; function to convert it to a hex file that can be read by our parser. We can also search for specific sample headers in the filter bar on Wireshark.</td>
+          <td>Andy and I are trying to test everything by taking parsed files from wireshark and putting it into a text file. We do that by copying the entire sFlow packet into a Hex Stream. Then we use the &quot;bytes.fromhex&quot; function to convert it to a hex file that can be read by our parser. We can also search for specific sample headers in the filter bar on Wireshark.</td>
           <td>3/23/2023</td>
+        </tr>
+        <tr>
+          <td>Chase</td>
+          <td>We have finished the parser. The next step is to get it to send the parsed data into a database.</td>
+          <td>5/11/2023</td>
         </tr>
       </tbody>
     </Table>
