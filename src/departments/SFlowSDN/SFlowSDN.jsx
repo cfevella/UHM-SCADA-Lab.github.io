@@ -16,8 +16,8 @@ const SFlowSDN = () => (
       </li>
       <li>Use Netcat on Raspberry Pis to monitor the sFlow traffic (we do not need any sFlow software on Pi).</li>
       <li>XDR files are packs of sFlow data.</li>
-      <li>We have to decide whether to use Python or C++ to unpack XDR files.</li>
-      <li>sFlow is going to need an sFlow exporter, collector, and analyzer. (refer to &quot;sFlow Structure&quot; in &quot;Helpful Links&quot; table below.)</li>
+      <li>The sFlow parser is coded with Python.</li>
+      <li>sFlow parsing needs an exporter, collector, and analyzer. (refer to &quot;sFlow Structure&quot; in &quot;Helpful Links&quot; table below.)</li>
     </ul>
     <h4 className="pt-4">Helpful Links</h4>
     <Row>
@@ -102,6 +102,10 @@ const SFlowSDN = () => (
         <tr>
           <td>scp (sender_username)@(sender_ip):(source file location, e.g. /home/pi/sflowPython/(filename)) (destination, e.g. /C:UserscdeliDownloads)</td>
           <td>downloads a file from another computer on the same network</td>
+        </tr>
+        <tr>
+          <td>I forget what the code is. I have to ask Mark.</td>
+          <td>pushes code file to github</td>
         </tr>
       </tbody>
     </Table>
